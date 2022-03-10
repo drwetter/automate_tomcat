@@ -34,8 +34,8 @@ myprompt|% ./automate_tomcat.sh
                     and removes any added tomcat user/group.
 
 Using a terminal the default is to get status info what the program is doing. When you use
---check in a cronjob, and if you're behind the actual release a notification you will
-to the default mail recipient.
+--check in a cronjob, and if you're behind the actual release a notification will be sent
+to the specified (cron) mail recipient.
 
 
 Use it at your own risk. Usage without any warranty. It's recommended to backup
