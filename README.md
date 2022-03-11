@@ -1,9 +1,9 @@
 # automate_tomcat
-Shellscript to ease installtion of Tomcat, update checks and to install updates
+Shellscript to automate installation, update checks and updates of Tomcat
 
 This is a bash script to automate tomcat
 
-  * installation
+  * (de)installation
   * update checks (to use e.g. via cron)
   * upgrades
  
