@@ -173,12 +173,12 @@ check_new_version() {
 
      $CURL -s -I $MIRROR_URL >/dev/null || error "Curl connect problem to $MIRROR_URL" 2
 
-     tmp="$($CURL -so - $MIRROR_URL | grep -E -o 'v8.5.[0-9]{1,2}' | sort -u | tail -1)"
+     tmp="$($CURL -so - $MIRROR_URL | grep -E -o 'v8.5.[0-9]{1,3}' | sort -u | tail -1)"
      if [[ $(wc -l <<< "$tmp") -ne 1 ]]; then
           error "Please check version @ $MIRROR_URL.\n I was not able determine the latest one for sure" 2
      fi
      version="${tmp//v/}"
-     [[ ! "$version" =~ 8.5.[0-9]{1,2} ]] && error "Please check version @ $MIRROR_URL.\n Does not look like a 8.5.xx version" 2
+     [[ ! "$version" =~ 8.5.[0-9]{1,3} ]] && error "Please check version @ $MIRROR_URL.\n Does not look like a 8.5.xx version" 2
      echo "$version"
 }
 
@@ -422,7 +422,6 @@ EOF
      fi
 
 exit 0
-
 
 
 # vim:tw=95:ts=5:sw=5:expandtab
